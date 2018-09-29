@@ -1,0 +1,9 @@
+{
+  "title":"Presentation de glowroot",
+  "theme":"white",
+  "controls":false,
+  "progress":true,
+  "history":true,
+  "center":true,
+  "transition":"fade"
+}

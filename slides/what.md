@@ -48,7 +48,7 @@ Pas sur nos postes, ni en integ<!-- .element class="fragment" style="color: red;
 
 ***Blackbelt***<!-- .element class="fragment" -->
 
--@@-
+-@-
 
 ## Alors glowroot c'est quoi ?
 
@@ -65,7 +65,7 @@ mémoire : ~ 2 ko<!-- .element class="fragment" -->
 
 [github.com/glowroot/glowroot-benchmark](https://github.com/glowroot/glowroot-benchmark)<!-- .element class="fragment" -->
 
--@-
+-@@-
 
 ### mode autonome
 
@@ -73,22 +73,5 @@ expose un web serveur sur le port 4000
 
 *En dev, sans mode debug (pleine vitesse)*
 
-*En integ, lors des validations MOE pour remonter les hotspots*
-
--@-
-
-### mode autonome
-
-***En parametre de la JVM***
-
-```
-java -javaagent:path/to/glowroot.jar -jar superApp.jar
-```
-
-![](images/intellij-javaagent.png)<!-- .element class="fragment" -->
-
-notes:
-sous Intellij, exemple de configuration de d'execution
-
-aide glowroot : [](https://github.com/glowroot/glowroot/wiki/Where-are-my-application-server%27s-JVM-args%3F#spring-boot)
+*En integ, lors des validations MOE pour remonter les hotspots*<!-- .element class="fragment fade-out" -->
 

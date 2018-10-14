@@ -12,6 +12,8 @@ https://glowroot.org/
 
 *OpenSource (ASL 2.0)*
 
+**Github star: 470**<!-- .element class="fragment" -->
+
 -@@-
 
 ### APM, c'est quoi cette bête là ?
@@ -31,7 +33,7 @@ Terme principal : TPS (Transaction/s)
 ## C'est quoi un APM ?
 
 * en prod : *Suivi des executions, SLA*<!-- .element class="fragment" -->
-* en recette : *suivi des executions, reductio des WTF*<!-- .element class="fragment" -->
+* en recette : *Réduction des WTF*<!-- .element class="fragment" -->
 * en integ : *Un outils pour eviter les WTF*<!-- .element class="fragment" -->
 * en dev : *Run à donf !*<!-- .element class="fragment" -->
 
@@ -50,7 +52,7 @@ Pas sur nos postes, ni en integ<!-- .element class="fragment" style="color: red;
 
 -@-
 
-## Alors glowroot c'est quoi ?
+### Alors glowroot c'est quoi ?
 
 Agent Java
 
@@ -59,19 +61,15 @@ Deux modes :
 ou
 *connecté*<!-- .element class="fragment" -->
 
+-@@-
+
+### Alors glowroot c'est quoi ?
+
 overhead marginal < 10 µs<!-- .element class="fragment" -->
 
 mémoire : ~ 2 ko<!-- .element class="fragment" -->
 
 [github.com/glowroot/glowroot-benchmark](https://github.com/glowroot/glowroot-benchmark)<!-- .element class="fragment" -->
 
--@@-
-
-### mode autonome
-
-expose un web serveur sur le port 4000
-
-*En dev, sans mode debug (pleine vitesse)*
-
-*En integ, lors des validations MOE pour remonter les hotspots*<!-- .element class="fragment fade-out" -->
-
+notes:
+overhead marginal dans la config de base

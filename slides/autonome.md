@@ -1,5 +1,15 @@
 ### mode autonome
 
+expose un web serveur sur le port 4000
+
+*En dev, sans mode debug (pleine vitesse)*
+
+*En integ, lors des validations MOE pour remonter les hotspots*<!-- .element class="fragment fade-out" -->
+
+-@@-
+
+### mode autonome
+
 ***En parametre de la JVM***
 
 ```
@@ -21,11 +31,11 @@ aide glowroot : [](https://github.com/glowroot/glowroot/wiki/Where-are-my-applic
 
 -@-
 
-Et dans vrai vie ?
+## Et dans la vrai vie ?
 
 -@@-
 
-Glowroot & AVISé
+## Glowroot & AVISé
 
 -@@-
 

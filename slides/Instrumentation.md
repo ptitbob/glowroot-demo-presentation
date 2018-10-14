@@ -136,6 +136,15 @@ pattern de capture
 Nom du timer
 
 *Le tout servi par une aide propre*<!-- .element class="fragment" -->
+
+-@@-
+
+### Instrumentation - Configuration
+
+Rechargement a chaud possible
+
+![](images/instrumentation-02-05.jpeg)
+
 -@@-
 
 ### Instrumentation - Configuration

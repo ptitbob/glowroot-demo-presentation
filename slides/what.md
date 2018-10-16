@@ -65,7 +65,7 @@ ou
 
 ### Alors glowroot c'est quoi ?
 
-overhead marginal < 10 µs<!-- .element class="fragment" -->
+overhead < 10 µs<!-- .element class="fragment" -->
 
 mémoire : ~ 2 ko<!-- .element class="fragment" -->
 

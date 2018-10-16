@@ -4,6 +4,10 @@
 
 Informations en plus ?
 
+notes:
+
+Qu'est ce que l'instrumentation
+
 -@@-
 
 Classes
@@ -14,6 +18,10 @@ Paramètres<!-- .element class="fragment" -->
 
 Resultat en retour<!-- .element class="fragment" -->
 
+notes:
+
+Ajouter des information sur...
+
 -@@-
 
 ### 2 possibilités
@@ -21,6 +29,12 @@ Resultat en retour<!-- .element class="fragment" -->
 Dans le code `Inline`<!-- .element class="fragment" -->
 
 Via l'agent et sa configuration<!-- .element class="fragment" -->
+
+notes:
+
+Instrumentation as a code
+
+ou configuration
 
 -@-
 
@@ -42,11 +56,19 @@ Ajout d'une dependance
 
 ```java
 @Instrumentation.Timer("person byId")
-public Person getPersonById(final Long personId) throws PersonNotFouncException {
+public Person getPersonById(
+    final Long personId
+) throws PersonNotFouncException {
   return personRepository.
-    findById(personId).orElseThrow(() -> new PersonNotFouncException(personId));
+    findById(personId).orElseThrow(
+        () -> new PersonNotFouncException(personId)
+    );
 }
 ```
+
+notes:
+
+La manière basique
 
 -@@-
 
@@ -55,11 +77,22 @@ public Person getPersonById(final Long personId) throws PersonNotFouncException 
 ```java
 @Instrumentation.TraceEntry(message = "person id: {{0}}",
   timer = "person getId")
-public Person getPersonById(final Long personId) throws PersonNotFouncException {
-  return personRepository.
-    findById(personId).orElseThrow(() -> new PersonNotFouncException(personId));
+public Person getPersonById(
+    final Long personId
+) throws PersonNotFouncException {
+  return personRepository
+    .findById(personId)
+    .orElseThrow(
+        () -> new PersonNotFouncException(personId)
+    );
 }
 ```
+
+notes:
+
+affichage des informations avec les paramètres...
+
+... mais si paramètre == object alors affichage du pointeur
 
 -@@-
 
@@ -75,6 +108,10 @@ public Person createPerson(Person person) {
 }
 ```
 
+notes:
+
+Possibilité d'acceder à des donnée par introspection
+
 -@@-
 
 ### `Inline`
@@ -83,11 +120,19 @@ public Person createPerson(Person person) {
 
 **Adhérence**<!-- .element class="fragment" -->
 
+notes:
+
+Le code est fortement lié à Glowroot et sera transmis d'environement a environement
+
 -@-
 
 ### Instrumentation - Configuration
 
 ![](images/instrumentation-01.jpeg)<!-- .element class="fragment" -->
+
+notes:
+
+La cofiguration accessible via le menu configuration
 
 -@@-
 
@@ -101,12 +146,20 @@ Utiliser l'introspection au runtime
 
 *méthode*<!-- .element class="fragment" -->
 
+notes:
+
+Permet différent niveau d'intrumentation, mais cela entraine des effets de bord
+
 -@@-
 
 ### Instrumentation - Configuration
 
 ![](images/instrumentation-02-01.jpeg)
 Toutes les méthodes
+
+notes:
+
+Instrumentation des toutes les méthode d'une classe
 
 -@@-
 
@@ -115,6 +168,10 @@ Toutes les méthodes
 ![](images/instrumentation-02-03.jpeg)
 Toutes une méthode
 
+notes:
+
+plus spécifiquement d'une méthode d'une classe
+
 -@@-
 
 ### Instrumentation - Configuration
@@ -122,6 +179,10 @@ Toutes une méthode
 Deux choix non exclusif, mais...
 
 ![](images/instrumentation-02-04.jpeg)<!-- .element class="fragment" -->
+
+notes:
+
+les deux timer/instrumentation se chevauchent
 
 -@@-
 
@@ -137,6 +198,10 @@ Nom du timer
 
 *Le tout servi par une aide propre*<!-- .element class="fragment" -->
 
+notes:
+
+Element additionel
+
 -@@-
 
 ### Instrumentation - Configuration
@@ -144,6 +209,10 @@ Nom du timer
 Rechargement a chaud possible
 
 ![](images/instrumentation-02-05.jpeg)
+
+notes:
+
+Permet une activation direct de l'instrumentation
 
 -@@-
 
@@ -166,6 +235,12 @@ exportation
   "timerName": "personTimer"
 }
 ```
+
+notes:
+
+permet ne sauvegarde des instrumentations significative
+
+Au sein du projet, pourquoi pas ?
 
 -@@-
 

@@ -166,7 +166,7 @@ Instrumentation des toutes les méthode d'une classe
 ### Instrumentation - Configuration
 
 ![](images/instrumentation-02-03.jpeg)
-Toutes une méthode
+Une méthode
 
 notes:
 

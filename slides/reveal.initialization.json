@@ -5,5 +5,5 @@
   "progress":true,
   "history":true,
   "center":true,
-  "transition":"slide"
+  "transition":"fade"
 }
